@@ -35,7 +35,7 @@ if [ ! -e $PYTHON_VERSION_NUM ] ; then
     make install"
 fi
 
-if [! -e $RUST ] ; then
+if [ ! -e $RUST ] ; then
   echo "RUN wget -O - https://sh.rustup.rs | sh -s -- -y && \
   echo 'export PATH=$HOME/.cargo/bin:$PATH' >> $BASH_ENV && \
   source $BASH_ENV"
