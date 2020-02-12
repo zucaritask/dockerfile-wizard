@@ -36,9 +36,8 @@ if [ ! -e $PYTHON_VERSION_NUM ] ; then
 fi
 
 if [ ! -e $RUST ] ; then
-  echo "RUN wget -O - https://sh.rustup.rs | sh -s -- -y && \
-  echo 'export PATH=$HOME/.cargo/bin:$PATH' >> $BASH_ENV && \
-  source $BASH_ENV"
+  echo "RUN wget -O - https://sh.rustup.rs | sh -s -- -y"
+  echo 'ENV PATH=/root/.cargo/bin:$PATH'
 fi
 
 # if [ ! -e $PHP_VERSION_NUM ] ; then
